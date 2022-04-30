@@ -1,11 +1,8 @@
 #include <ESP8266WiFi.h>                                               
 #include <FirebaseArduino.h> 
-//#include <Firebase_ESP_Client.h>
-                                       
-//FirebaseData fbdo;
 
-#define FIREBASE_HOST "nestiot-7bff6-default-rtdb.firebaseio.com"              // the project name address from firebase id
-#define FIREBASE_AUTH "FBtj46JyVWQ9GN0ocMxGv8fxmDtdT3EuC41GLLe5"       // the secret key generated from firebase
+#define FIREBASE_HOST "project_name-default-rtdb.firebaseio.com"      // the project name address from firebase id
+#define FIREBASE_AUTH "#########################################"       // the secret key generated from firebase
 #define WIFI_SSID "DavidsWiFi"                                          
 #define WIFI_PASSWORD "David1971"                                  
  
@@ -37,16 +34,16 @@ void setup()
  
 void loop() 
 {
-  fireStatus = Firebase.getString("LED_STATUS");                                      // get ld status input from firebase
-  if(fireStatus== "ON") 
-  {                                                          // compare the input of led status received from firebase
+  fireStatus = Firebase.getString("LED_STATUS");        // get ld status input from firebase
+  if(fireStatus== "ON")                    // compare the input of led status received from firebase
+  {                                                          
     Serial.println("Led Turned ON");                                                        
     digitalWrite(led, HIGH);               // make external led ON
   } 
-  else if(fireStatus == "OFF") 
-  {                                                  // compare the input of led status received from firebase
+  else if(fireStatus == "OFF")             // compare the input of led status received from firebase
+  {                                                  
     Serial.println("Led Turned OFF");
-    digitalWrite(led, LOW);       // make external led OFF               
+    digitalWrite(led, LOW);                // make external led OFF               
   }
   else{
     Serial.println("Check properly");
