@@ -3,8 +3,8 @@
 
 #define FIREBASE_HOST "project_name-default-rtdb.firebaseio.com"      // the project name address from firebase id
 #define FIREBASE_AUTH "#########################################"       // the secret key generated from firebase
-#define WIFI_SSID "DavidsWiFi"                                          
-#define WIFI_PASSWORD "David1971"                                  
+#define WIFI_SSID "###Wifi-Name###"                                          
+#define WIFI_PASSWORD "###WIfi-Password###"                                  
  
 String fireStatus="";                                                     // led status received from firebase
 int led = 0;  
